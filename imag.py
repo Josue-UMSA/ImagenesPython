@@ -18,7 +18,6 @@ def bordes(imagen):
     #   SOBEL
     #Kh=([-1, 0, 1], [-2, 0, 2], [-1, 0, 1])
     #Kv=([-1, -2, -1], [0, 0, 0], [1, 2, 1])
-    
     #Prewit
     Kh=([-1, 0, 1], [-1, 0, 1], [-1, 0, 1])
     Kv=([-1, -1, -1], [0, 0, 0], [1, 1, 1])
@@ -60,7 +59,7 @@ def mulMatriz(imagen,x,y,mascara):
     return s
         
 img = cv.imread('lago.png',0)
-#img = img[600:800,720:920]
+img = img[600:800,720:920]
 ret,img = cv.threshold(img,127,255,cv.THRESH_BINARY)
 #cv.imshow('win',img)
 bordes(img)
